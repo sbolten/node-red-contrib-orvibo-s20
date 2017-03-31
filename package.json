@@ -1,0 +1,23 @@
+{
+  "name": "node-red-contrib-orvibo-s20",
+  "version": "0.0.1",
+  "description": "Node Red Orvibo S20",
+  "main": "orvibo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sbolten/node-red-contrib-orvibo-s20.git"
+  },
+  "keywords": [
+    "node-red",
+    "orvibo"
+  ],
+  "author": "Stephan Bolten <stephan.bolten@gmx.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sbolten/node-red-contrib-orvibo-s20/issues"
+  },
+  "homepage": "https://github.com/sbolten/node-red-contrib-orvibo-s20#readme"
+}
