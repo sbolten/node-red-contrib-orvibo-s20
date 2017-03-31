@@ -16,7 +16,7 @@ module.exports = function(RED) {
 		});
 
 		o.on("deviceadded", function(device) {
-			console.log("A device has been added:", device.type);
+			node.log("A device has been added:", device.type);
 			clearInterval(time1);
 			o.discover();
 
@@ -26,7 +26,7 @@ module.exports = function(RED) {
 		})
 
 		o.on("subscribed", function(device) {
-			console.log("Subscription to %s successful!", device.macAddress);
+			node.log("Subscription to %s successful!", device.macAddress);
 			dev = device;
 			node.status({
 				fill: "green",
@@ -37,7 +37,7 @@ module.exports = function(RED) {
 		})
 
 		o.on("externalstatechanged", function(device, state) {
-			console.log("new state " + device.name + ": " + state);
+			node.log("new state " + device.name + ": " + state);
 			var msg = {
 				payload: state
 			}
@@ -45,7 +45,7 @@ module.exports = function(RED) {
 		});
 
 		this.on('input', function(msg) {
-			console.log("message received: " + msg.payload);
+			node.log("message received: " + msg.payload);
 			// console.log(dev);
 			var state = msg.payload;
 			o.setState({
@@ -62,7 +62,7 @@ module.exports = function(RED) {
 
 	o.listen(function() {
 		time1 = setInterval(function() {
-			console.log("Discover....");
+			// console.log("Discover S20....");
 			o.discover();
 		}, 10000)
 	});
