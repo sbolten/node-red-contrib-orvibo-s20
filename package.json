@@ -12,7 +12,7 @@
   },
   "keywords": [
     "node-red",
-    "orvibo"
+    "orvibos20"
   ],
   "author": "Stephan Bolten <stephan.bolten@gmx.net>",
   "license": "MIT",
@@ -21,12 +21,12 @@
   },
   "homepage": "https://github.com/sbolten/node-red-contrib-orvibo-s20#readme",
   "dependencies": {
-    "node-orvibo": "~1.1.0",
+    "node-orvibo": "^1.1.0",
     "path": ""
   },
   "node-red": {
     "nodes": {
-        "orvibo": "orvibo.js"
+        "OrviboS20": "orvibos20.js"
     }
   }
 
