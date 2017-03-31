@@ -61,7 +61,6 @@ module.exports = function(RED) {
 	};
 
 	o.listen(function() {
-
 		time1 = setInterval(function() {
 			o.discover();
 		}, 10000)
