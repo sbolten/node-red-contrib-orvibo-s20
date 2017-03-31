@@ -1,0 +1,42 @@
+<script type="text/javascript">
+    RED.nodes.registerType('OrviboS20',{
+        category: 'Orvibo',
+        color: '#12CD3E',
+        defaults: {
+            name: {value:"Orvibo S20"},
+            ip: {value:"127.0.0.1"},
+            mac: {value:"accf2348e9dc"}
+       },
+        inputs:1,
+        outputs:1,
+        icon: "bridge.png",
+        label: function() {
+            return this.name||"Orvibo S20";
+        },
+        paletteLabel: "Orvibo S20"
+    });
+</script>
+
+<script type="text/x-red" data-template-name="Orvibo S20">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-ip"><i class="icon-tag"></i> IP</label>
+        <input type="text" id="node-input-ip" placeholder="127.0.0.1">
+    </div>
+    <div class="form-row">
+        <label for="node-input-mac"><i class="icon-tag"></i> MAC</label>
+        <input type="text" id="node-input-mac" placeholder="accf2348e9dc">
+    </div>
+</script>
+
+
+<script type="text/x-red" data-help-name="Orvibo S20">
+    <p>Send a msg.payload of true (on) or false (off)</p>
+    Will currently ignore IP and MAC settings and searches the local network for existing sockets
+    .... on and off are only send to the last socket found ....
+
+    !!!! Under Development !!!!
+</script>
