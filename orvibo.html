@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    RED.nodes.registerType('Orvibo',{
+    RED.nodes.registerType('OrviboS20',{
         category: 'orvibo',
         color: '#12CD3E',
         defaults: {
@@ -35,4 +35,8 @@
 
 <script type="text/x-red" data-help-name="Orvibo">
     <p>Send a msg.payload of true (on) or false (off)</p>
+    Will currently ignore IP and MAC settings and searches the local network for existing sockets
+    .... on and off are only send to the last socket found ....
+
+    !!!! Under Development !!!!
 </script>

@@ -6,7 +6,7 @@ var time2 = [];
 
 module.exports = function(RED) {
 
-	function orvibo(config) {
+	function orviboS20(config) {
 		RED.nodes.createNode(this, config);
 		var node = this;
 		node.status({
@@ -62,12 +62,13 @@ module.exports = function(RED) {
 
 	o.listen(function() {
 		time1 = setInterval(function() {
+			console.log("Discover....");
 			o.discover();
 		}, 10000)
 	});
 
 
-	RED.nodes.registerType("Orvibo", orvibo);
+	RED.nodes.registerType("OrviboS20", orviboS20);
 
 
 }
