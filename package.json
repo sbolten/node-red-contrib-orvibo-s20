@@ -19,5 +19,15 @@
   "bugs": {
     "url": "https://github.com/sbolten/node-red-contrib-orvibo-s20/issues"
   },
-  "homepage": "https://github.com/sbolten/node-red-contrib-orvibo-s20#readme"
+  "homepage": "https://github.com/sbolten/node-red-contrib-orvibo-s20#readme",
+  "dependencies": {
+    "node-orvibo": "~1.1.0",
+    "path": ""
+  },
+  "node-red": {
+    "nodes": {
+        "orvibo": "orvibo.js"
+    }
+  }
+
 }
